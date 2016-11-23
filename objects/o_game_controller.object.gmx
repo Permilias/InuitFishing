@@ -59,7 +59,7 @@ instance_create(global.gameWidth/2,global.gameHeight/2+1,o_bleu);
 
 // Create menu
 
-instance_create(global.gameWidth/2,global.gameHeight/2,o_logo);
+instance_create(global.gameWidth/2,global.gameHeight/2+10,o_logo);
 instance_create(global.gameWidth/2,global.gameHeight/2,o_credits);
 instance_create(global.gameWidth/2,global.gameHeight/2,o_mute_prompt);
 instance_create(global.gameWidth/2,global.gameHeight/2,o_play);
@@ -235,11 +235,12 @@ if fishRow = 149 { comboValue = 415939 }
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if state != "menu" {
 draw_set_font(font0);
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_text(global.gameWidth-5,0,string(global.score));
+}
 
 if instance_exists(o_fish_spawner) and state = "relax" { 
     draw_set_font(font0);
