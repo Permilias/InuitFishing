@@ -1,4 +1,4 @@
-﻿/// x__(value,instance)
+/// x__(value,instance)
 
 argument1.x = argument0;
 

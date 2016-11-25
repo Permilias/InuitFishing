@@ -149,7 +149,7 @@ if instance_exists(o_fish_spawner) {
 };
 
 
-if keyboard_check_pressed(ord('M')) and state != "menu" {
+if keyboard_check_pressed(vk_escape) and state != "menu" {
         with (o_fish_spawner) { instance_destroy() }
         state = "menu"
 
@@ -167,7 +167,7 @@ if keyboard_check_pressed(ord('M')) and state != "menu" {
     o_fishing_rod.state = "fishing";
 };
 
-if keyboard_check_pressed(ord('L')) {
+if keyboard_check_pressed(ord('M')) {
         if audio_is_playing(snd_music) { 
             if !audio_is_paused(snd_music) {
                 audio_pause_sound(snd_music) 
@@ -177,7 +177,7 @@ if keyboard_check_pressed(ord('L')) {
         }
 };
 
-if state = "score" and keyboard_check(ord('M')) {   
+if state = "score" and keyboard_check(vk_escape) {   
     state = "menu"
 
     TweenFire(o_logo, x__, EaseInOutCubic,TWEEN_MODE_ONCE,true,0,.7,o_logo.x,room_width/2);
@@ -194,7 +194,7 @@ if state = "score" and keyboard_check(ord('M')) {
     o_fishing_rod.state = "fishing";
 }
 
-if state = "score" and keyboard_check(ord('F')) {   
+if state = "score" and keyboard_check(ord('F')) or state = "score" and keyboard_check(ord('G')) or state = "score" and keyboard_check(ord('G')) {   
     o_game_controller.state = "play"
     o_fishing_rod.state = "fishing"
     instance_create(x,y,o_fish_spawner)
@@ -236,10 +236,10 @@ if fishRow = 149 { comboValue = 415939 }
           <argument>
             <kind>1</kind>
             <string>if state != "menu" {
-draw_set_font(font0);
+draw_set_font(font2);
 draw_set_color(c_white);
 draw_set_halign(fa_right);
-draw_text(global.gameWidth-5,0,string(global.score));
+draw_text(global.gameWidth-5,+1,string(global.score));
 }
 
 if instance_exists(o_fish_spawner) and state = "relax" { 
@@ -267,10 +267,10 @@ draw_set_halign(fa_left);
 draw_text(5,20,string(fishRow) + " fishes in a row");*/
 
 if state = "score" {
-    draw_set_font(font2);
+    draw_set_font(font4);
     draw_set_color(c_white);
     draw_set_halign(fa_center);
-    draw_text(room_width/2,room_height/2-10,string(global.score));
+    draw_text(room_width/2,room_height/2-5,string(global.score));
 }
 
 

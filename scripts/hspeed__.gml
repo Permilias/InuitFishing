@@ -1,4 +1,4 @@
-﻿/// hspeed__(value,instance)
+/// hspeed__(value,instance)
 
 argument1.hspeed = argument0;
 

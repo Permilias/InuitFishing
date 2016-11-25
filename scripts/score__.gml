@@ -1,4 +1,4 @@
-﻿/// score__(value)
+/// score__(value)
 
 score = argument0;
 

@@ -1,4 +1,4 @@
-﻿/// friction__(value,instance)
+/// friction__(value,instance)
 
 argument1.friction = argument0;
 
