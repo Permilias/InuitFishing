@@ -1,4 +1,4 @@
-/// null()
+﻿/// null()
 // return 0
 
 

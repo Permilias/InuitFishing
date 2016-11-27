@@ -26,16 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>alpha_decay = .025;
-spd = 3
+
 alpha = 1
 
-FishRow = fishRow;
-
-tween2 = TweenFire(id,y__,EaseOutQuart,0,true,0,0.1,y,y-16);
-call2 = TweenAddCallback(tween2,TWEEN_EV_FINISH,id,TweenFire,id,y__,EaseOutBounce,0,true,0,0.3,y-16,y+3)
-
-
-
+FishRow = fishRow
 </string>
           </argument>
         </arguments>
@@ -60,9 +54,7 @@ call2 = TweenAddCallback(tween2,TWEEN_EV_FINISH,id,TweenFire,id,y__,EaseOutBounc
             <kind>1</kind>
             <string>
 alpha -= 0.02;
-if spd &gt; 0 { spd -= 0.1 } else { spd = 0 }
-x += spd
-
+y -= 0.2
 
 if image_alpha &lt;= 0 {  instance_destroy()  }
 </string>
@@ -92,7 +84,7 @@ draw_set_alpha(alpha)
 draw_set_font(font1);
 draw_set_color(c_white);
 draw_set_halign(fa_left);
-draw_text(x,y-4,"+" + string(comboValue)); 
+draw_text(x,y-4,"+ " + string(comboValue)); 
 draw_set_alpha(1)
 </string>
           </argument>

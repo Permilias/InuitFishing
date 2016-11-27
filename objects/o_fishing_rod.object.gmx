@@ -72,7 +72,7 @@ instance_create(global.gameWidth/2,(global.gameHeight/2-36),o_splashrod);
 instance_create(x,(y+30),o_smallbulle);
 instance_create(x,(y+30),o_smallbulle);
 
-instance_create(x+2,36,o_1);
+instance_create(x+8,36,o_1);
 </string>
           </argument>
         </arguments>
@@ -100,6 +100,7 @@ switch(state) {
     case "nothing" :
     break;
     case "fishing" :
+        
         
         o_inuit.sprite_index = spr_inuit_idle;
         
@@ -164,11 +165,9 @@ switch(state) {
                 
         if keyboard_check_pressed(ord("H")) {
             bait = "yellow";
-            scr_spawnShine()
         }
         if keyboard_check_pressed(ord("G")) {
             bait = "green";
-            scr_spawnShine()
         }
             break;
             case "yellow" :
@@ -183,13 +182,11 @@ switch(state) {
                         }
                     }
                 }
-        if keyboard_check_pressed(ord("F")) {
+                if keyboard_check_pressed(ord("F")) {
             bait = "blue";
-            scr_spawnShine()
         }
         if keyboard_check_pressed(ord("G")) {
             bait = "green";
-            scr_spawnShine()
         }
             break;
             case "green" :
@@ -204,13 +201,11 @@ switch(state) {
                         }
                     }
                 }
-        if keyboard_check_pressed(ord("F")) {
+                if keyboard_check_pressed(ord("F")) {
             bait = "blue";
-            scr_spawnShine()
         }
         if keyboard_check_pressed(ord("H")) {
             bait = "yellow";
-            scr_spawnShine()
         }
             break;
         }
@@ -222,6 +217,15 @@ switch(state) {
         TweenAddCallback(tween,TWEEN_EV_FINISH,id,scr_set_state,"throwing" );
         break;
     case "throwing" :
+        if keyboard_check_pressed(ord("H")) {
+            bait = "yellow";
+        }
+        if keyboard_check_pressed(ord("G")) {
+            bait = "green";
+        }
+        if keyboard_check_pressed(ord("F")) {
+            bait = "blue";
+        }
         o_inuit.sprite_index = spr_inuit_idle;
         tween = TweenFire(id, y__, EaseOutBack,TWEEN_MODE_ONCE,true,0,.15,y,game_position[pos]);
         state = "fishing"
@@ -245,7 +249,7 @@ if o_game_controller.state != "menu" {
     }
 }
 
-if instance_place(x,y,o_play) and (keyboard_check_pressed(ord("F")) or keyboard_check_pressed(ord("G")) or keyboard_check_pressed(ord("H"))) and o_game_controller.state ="menu" {
+if instance_place(x,y,o_play) and keyboard_check_pressed(ord("F")) and o_game_controller.state ="menu" {
     o_game_controller.state = "play"
     instance_create(x,y,o_fish_spawner)
     
@@ -274,7 +278,7 @@ if instance_place(x,y,o_play) and (keyboard_check_pressed(ord("F")) or keyboard_
     
     draw_sprite(s_press_f,0,room_width/2,room_width/2)
 }
-if instance_place(x,y,o_relax) and (keyboard_check_pressed(ord("F")) or keyboard_check_pressed(ord("G")) or keyboard_check_pressed(ord("H"))) and o_game_controller.state ="menu" {
+if instance_place(x,y,o_relax) and keyboard_check_pressed(ord("F")) and o_game_controller.state ="menu" {
     o_game_controller.state = "relax"
     instance_create(x,y,o_fish_spawner)
     

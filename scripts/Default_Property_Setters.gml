@@ -1,4 +1,4 @@
-/// Default_Property_Setters()
+﻿/// Default_Property_Setters()
 /*
     - To create your own property setter, create a new script and write: 
         

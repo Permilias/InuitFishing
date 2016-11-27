@@ -55,7 +55,7 @@ FishRow = fishRow
             <kind>1</kind>
             <string>
 if fading {alpha -= 0.030;
-y += 0.3 }
+y -= 0.3 }
 
 if  alpha &lt;= 0 {
     instance_destroy();

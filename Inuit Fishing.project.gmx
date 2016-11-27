@@ -149,8 +149,6 @@
     <sprite>sprites\spr_particle</sprite>
     <sprite>sprites\spr_X</sprite>
     <sprite>sprites\s_youScored</sprite>
-    <sprite>sprites\s_restart</sprite>
-    <sprite>sprites\s_shine</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -228,14 +226,11 @@
     <script>scripts\TweenReverse.gml</script>
     <script>scripts\TweenStep.gml</script>
     <script>scripts\TweenStop.gml</script>
-    <script>scripts\Scr_ChangeState.gml</script>
-    <script>scripts\scr_spawnShine.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
     <font>fonts\font1</font>
     <font>fonts\font2</font>
-    <font>fonts\font4</font>
   </fonts>
   <objects name="objects">
     <object>objects\anim_go_left</object>
@@ -277,7 +272,6 @@
     <object>objects\o_X</object>
     <object>objects\o_youScored</object>
     <object>objects\obj_SharedTweener</object>
-    <object>objects\o_shine</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
