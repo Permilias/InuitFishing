@@ -35,11 +35,10 @@ game_position[0] = o_lane_top.y-9;
 game_position[1] = o_lane_middle.y-9;
 game_position[2] = o_lane_bottom.y-9;
 
-menu_position[0] = 92;
-menu_position[1] = 112;
-menu_position[2] = 134;
+menu_position[0] = 112;
+menu_position[1] = 134;
 
-y = 92;
+y = 112;
 
 splashtimer = 7;
 </string>
@@ -121,14 +120,26 @@ switch(state) {
         }
         
         ppos = pos
-        if keyboard_check_pressed(vk_up) {
-            if pos = 0 { pos = 0; } else { pos -- 
-            instance_create(x,y-pos_bulle2,o_smallbulle);
-            instance_create(x,y-pos_bulle2,o_smallbulle);};
-        } else if keyboard_check_pressed(vk_down) {
-            if pos = 2 { pos = 2; } else  { pos ++
-            instance_create(x,y+pos_bulle,o_smallbulle);
-            instance_create(x,y+pos_bulle,o_smallbulle); }
+        if o_game_controller.state != "menu" {
+            if keyboard_check_pressed(vk_up) {
+                if pos = 0 { pos = 0; } else { pos -- 
+                instance_create(x,y-pos_bulle2,o_smallbulle);
+                instance_create(x,y-pos_bulle2,o_smallbulle);};
+            } else if keyboard_check_pressed(vk_down) {
+                if pos = 2 { pos = 2; } else  { pos ++
+                instance_create(x,y+pos_bulle,o_smallbulle);
+                instance_create(x,y+pos_bulle,o_smallbulle); }
+            }
+        } else {
+            if keyboard_check_pressed(vk_up) {
+                if pos = 0 { pos = 0; } else { pos -- 
+                instance_create(x,y-pos_bulle2,o_smallbulle);
+                instance_create(x,y-pos_bulle2,o_smallbulle);};
+            } else if keyboard_check_pressed(vk_down) {
+                if pos = 1 { pos = 1; } else  { pos ++
+                instance_create(x,y+pos_bulle,o_smallbulle);
+                instance_create(x,y+pos_bulle,o_smallbulle); }
+            }
         }
         if ppos != pos {
             if o_game_controller.state = "menu" {
@@ -206,20 +217,19 @@ switch(state) {
         TweenAddCallback(tween,TWEEN_EV_FINISH,id,scr_set_state,"throwing" );
         break;
     case "throwing" :
-    if keyboard_check_pressed(ord("H")) {
+        if keyboard_check_pressed(ord("H")) {
             bait = "yellow";
-}
-if keyboard_check_pressed(ord("G")) {
+        }
+        if keyboard_check_pressed(ord("G")) {
             bait = "green";
-}
-if keyboard_check_pressed(ord("F")) {
+        }
+        if keyboard_check_pressed(ord("F")) {
             bait = "blue";
-}
+        }
         o_inuit.sprite_index = spr_inuit_idle;
         tween = TweenFire(id, y__, EaseOutBack,TWEEN_MODE_ONCE,true,0,.15,y,game_position[pos]);
         state = "fishing"
-        
-        
+
 };
 
 
@@ -265,6 +275,8 @@ if instance_place(x,y,o_play) and keyboard_check_pressed(ord("F")) and o_game_co
     }
     
     with (o_fish_t) { instance_destroy() }
+    
+    draw_sprite(s_press_f,0,room_width/2,room_width/2)
 }
 if instance_place(x,y,o_relax) and keyboard_check_pressed(ord("F")) and o_game_controller.state ="menu" {
     o_game_controller.state = "relax"
@@ -294,6 +306,13 @@ if instance_place(x,y,o_relax) and keyboard_check_pressed(ord("F")) and o_game_c
     instance_create(room_width/2,room_height/2,o_relax_prompt)
     
     with (o_fish_t) { instance_destroy() }
+    
+   
+}
+
+if instance_place(x,y,o_play) {
+    draw_sprite(s_press_f,0,room_width/2,room_width/2)
+    show_debug_message("1")
 }
 
 depth = o_nightsky + 1
