@@ -29,10 +29,22 @@
 spd = 3
 alpha = 1
 
+color = c_yellow
+
 FishRow = fishRow;
 
 tween2 = TweenFire(id,y__,EaseOutQuart,0,true,0,0.1,y,y-16);
 call2 = TweenAddCallback(tween2,TWEEN_EV_FINISH,id,TweenFire,id,y__,EaseOutBounce,0,true,0,0.3,y-16,y+3)
+
+if currentFish = "green" { 
+    color = make_colour_rgb(43,85,28)
+}
+if currentFish = "blue" { 
+    color = make_colour_rgb(96,138,150)
+}
+if currentFish = "red" { 
+    color = make_colour_rgb(102,56,76)
+}
 
 
 
@@ -88,12 +100,13 @@ if image_alpha &lt;= 0 {  instance_destroy()  }
           <argument>
             <kind>1</kind>
             <string>
+draw_set_colour(color);
 draw_set_alpha(alpha)
 draw_set_font(font1);
-draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_text(x,y-4,"+" + string(comboValue)); 
 draw_set_alpha(1)
+draw_set_colour(c_white);
 </string>
           </argument>
         </arguments>

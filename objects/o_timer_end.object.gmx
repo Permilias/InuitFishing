@@ -25,74 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alpha_decay = .025;
-fading = false
-
-alpha = 1
-
-FishRow = fishRow
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>
-if fading {alpha -= 0.030;
-y += 0.3 }
-
-if  alpha &lt;= 0 {
-    instance_destroy();
-    fishRow = 0;
-    instance_create(global.gameWidth - 5, 10,o_combo);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-draw_set_alpha(alpha)
-draw_set_font(font1);
-draw_set_color(c_white);
-draw_set_halign(fa_right);
-if fishRow &gt; 1 { 
-    draw_text(x,y,"x" + string(fishRow)); 
-}
-draw_set_alpha(1)
+TweenSimpleMove(x,y,o_timer.x,o_timer.y,10920,EaseLinear)
 </string>
           </argument>
         </arguments>

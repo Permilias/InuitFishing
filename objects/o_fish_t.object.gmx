@@ -218,13 +218,18 @@ switch (state) {
         
     break;
     case "reeled" :
+    
+        if xprevious &lt; x { image_angle += 10 }
+        if xprevious &gt; x { image_angle -= 10 }
+        
         y = o_fishing_rod.y+1
         if y &lt;= 40 {
             instance_destroy();
             global.score += comboValue;
             fishRow ++;
         }
-        image_alpha -= 0.2
+        
+        
     break;
 }
 
