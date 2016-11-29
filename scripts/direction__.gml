@@ -1,4 +1,4 @@
-﻿/// direction__(value,instance)
+/// direction__(value,instance)
 
 argument1.direction = argument0;
 

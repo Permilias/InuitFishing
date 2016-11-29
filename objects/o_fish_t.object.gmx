@@ -224,6 +224,7 @@ switch (state) {
             global.score += comboValue;
             fishRow ++;
         }
+        image_alpha -= 0.2
     break;
 }
 
