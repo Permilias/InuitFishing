@@ -60,7 +60,7 @@ y += 0.3 }
 if  alpha &lt;= 0 {
     instance_destroy();
     fishRow = 0;
-    instance_create(global.gameWidth - 5, 10,o_combo);
+    instance_create(xstart, ystart,o_combo);
 }
 </string>
           </argument>
@@ -85,11 +85,11 @@ if  alpha &lt;= 0 {
           <argument>
             <kind>1</kind>
             <string>
-draw_set_alpha(alpha)
+draw_set_alpha(alpha-.2)
 draw_set_font(font1);
 draw_set_color(c_white);
 draw_set_halign(fa_right);
-if fishRow &gt; 1 { 
+if fishRow &gt; 9{ 
     draw_text(x,y,"x" + string(fishRow)); 
 }
 draw_set_alpha(1)

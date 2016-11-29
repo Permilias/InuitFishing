@@ -25,14 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>state = "swimming";
+            <string>sprite_index = choose(spr_smallfish,spr_smallfish2,spr_smallfish3)
+
+state = "swimming";
 
 spd = .2
 hspd = 0;
 image_speed = 0;
 
-y = random_range(o_lane_top.y+20,
-           o_lane_middle.y+20);
+y = random_range(o_lane_top.y+10,
+           o_lane_middle.y+30);
            
 x = choose(global.gameWidth -20,
            20);

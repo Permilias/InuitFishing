@@ -218,7 +218,9 @@ switch (state) {
         
     break;
     case "reeled" :
-    
+        
+        image_alpha -= 0.2
+        
         if xprevious &lt; x { image_angle += 10 }
         if xprevious &gt; x { image_angle -= 10 }
         

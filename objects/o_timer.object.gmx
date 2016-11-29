@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_alpha(.5)
-draw_set_colour(c_navy)
+            <string>draw_set_alpha(.2)
+draw_set_colour(c_white)
 draw_line(x,y,o_timer_end.x,o_timer_end.y)
 draw_set_colour(c_white)
 draw_set_alpha(1)

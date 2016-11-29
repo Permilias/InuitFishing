@@ -51,9 +51,14 @@
             <string>
 if pressed = 1 { if sprite_index = s_press_f { image_alpha -= .1 } else { image_alpha -= .04 } }
 
-if keyboard_check_pressed(ord(key)) and canPress = 1{ pressed = 1 }
+if keyboard_check_pressed(ord(key)) and canPress = 1{ 
+    tween = TweenFire(id, y__, EaseInBack,TWEEN_MODE_ONCE,true,0,.5,y,y-30); 
+    canPress = 0
+}
 
 if image_alpha &lt; 0 { image_alpha = 0 }
+
+if o_game_controller.state = "menu" { image_alpha = 0 }
 </string>
           </argument>
         </arguments>

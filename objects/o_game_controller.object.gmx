@@ -65,8 +65,8 @@ instance_create(global.gameWidth/2,global.gameHeight/2,o_credits);
 instance_create(global.gameWidth/2,global.gameHeight/2,o_mute_prompt);
 instance_create(global.gameWidth/2,global.gameHeight/2,o_play);
 instance_create(global.gameWidth/2,global.gameHeight/2,o_relax);
-instance_create(global.gameWidth - 5, 10,o_combo);
-instance_create(o_fishing_rod.x - 7, o_fishing_rod.y+4,o_press_f);
+instance_create(global.gameWidth/2 +5, 10,o_combo);
+instance_create(o_fishing_rod.x - 8, o_fishing_rod.y+4,o_press_f);
 </string>
           </argument>
         </arguments>
@@ -94,6 +94,8 @@ if state != "menu" { o_fishing_rod.state = "nothing";
 
 instance_create(room_width/2,room_height/2,o_youScored);
 instance_create(room_width/2,room_height/2,o_restart);
+instance_create(room_width/2,room_height/2,o_facebook);
+instance_create(room_width/2,room_height/2,o_twitter);
 
 tween = TweenFire(o_fishing_rod, y__, EaseOutBack,TWEEN_MODE_ONCE,true,0,.2,o_fishing_rod.y,o_inuit.y + 10); }
 
@@ -195,16 +197,22 @@ if state = "score" and keyboard_check(vk_escape) {
     o_fishing_rod.state = "fishing";
 }
 
-if state = "score" and keyboard_check(ord('F')) or state = "score" and keyboard_check(ord('G')) or state = "score" and keyboard_check(ord('G')) {   
+/*if state = "score" and keyboard_check(ord('F')) or state = "score" and keyboard_check(ord('G')) or state = "score" and keyboard_check(ord('G')) {   
     o_game_controller.state = "play"
     o_fishing_rod.state = "fishing"
+    
+    instance_create( 2, global.gameHeight -2,o_timer);
+    instance_create(global.gameWidth -2, global.gameHeight -2,o_timer_end);
+    
     instance_create(x,y,o_fish_spawner)
+    comboValue = 1;
+    o_combo.fading = true
     
     TweenFire(o_fishing_rod, y__, EaseOutBack,TWEEN_MODE_ONCE,true,0,.3,o_fishing_rod.y,o_fishing_rod.game_position[0]);
     pos = 0
     bait = "blue"
     global.score = 0;
-}
+}*/
 
 if fishRow &gt; 0 { comboValue = 1 }
 if fishRow &gt; 10 { comboValue = 5 }

@@ -36,14 +36,14 @@ FishRow = fishRow;
 tween2 = TweenFire(id,y__,EaseOutQuart,0,true,0,0.1,y,y-16);
 call2 = TweenAddCallback(tween2,TWEEN_EV_FINISH,id,TweenFire,id,y__,EaseOutBounce,0,true,0,0.3,y-16,y+3)
 
-if currentFish = "green" { 
-    color = make_colour_rgb(43,85,28)
-}
 if currentFish = "blue" { 
-    color = make_colour_rgb(96,138,150)
+    color = make_colour_rgb(104,186,255)
+}
+if currentFish = "green" { 
+    color = make_colour_rgb(51,166,75)
 }
 if currentFish = "red" { 
-    color = make_colour_rgb(102,56,76)
+    color = make_colour_rgb(213,43,43)
 }
 
 

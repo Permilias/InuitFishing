@@ -28,6 +28,7 @@
             <string>draw_self();
 draw_sprite(spr_tealalpha,0,global.gameWidth/2,global.gameHeight/2+6);
 draw_sprite(spr_lightblue,0,global.gameWidth/2,global.gameWidth/2-71)
+draw_sprite(o_inuit.sprite_index,o_inuit.image_index,o_inuit.x,o_inuit.y)
 </string>
           </argument>
         </arguments>

@@ -112,6 +112,8 @@
       <sprite>sprites\spr_splashrod</sprite>
       <sprite>sprites\spr_bleu</sprite>
       <sprite>sprites\spr_smallfish</sprite>
+      <sprite>sprites\spr_smallfish2</sprite>
+      <sprite>sprites\spr_smallfish3</sprite>
       <sprite>sprites\spr_fish_t</sprite>
       <sprite>sprites\spr_ice</sprite>
       <sprite>sprites\spr_fish_blue</sprite>
@@ -122,8 +124,8 @@
       <sprite>sprites\spr_fish_green</sprite>
       <sprite>sprites\spr_tealalpha</sprite>
       <sprite>sprites\spr_mountain</sprite>
-      <sprite>sprites\spr_water_back</sprite>
       <sprite>sprites\spr_fishing_rod</sprite>
+      <sprite>sprites\spr_water_back</sprite>
       <sprite>sprites\spr_fishing_rod_green</sprite>
       <sprite>sprites\spr_inuit_idle</sprite>
       <sprite>sprites\spr_fishing_rod_blue</sprite>
@@ -151,6 +153,8 @@
     <sprite>sprites\s_youScored</sprite>
     <sprite>sprites\s_restart</sprite>
     <sprite>sprites\s_shine</sprite>
+    <sprite>sprites\s_facebook</sprite>
+    <sprite>sprites\s_twitter</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -247,13 +251,13 @@
     <object>objects\o_bulle</object>
     <object>objects\o_combo</object>
     <object>objects\o_credits</object>
-    <object>objects\o_f</object>
     <object>objects\o_fish_spawner</object>
     <object>objects\o_fish_t</object>
     <object>objects\o_fishing_rod</object>
+    <object>objects\o_f</object>
     <object>objects\o_g</object>
-    <object>objects\o_game_controller</object>
     <object>objects\o_h</object>
+    <object>objects\o_game_controller</object>
     <object>objects\o_ice</object>
     <object>objects\o_indicator</object>
     <object>objects\o_inuit</object>
@@ -271,11 +275,15 @@
     <object>objects\o_relax_prompt</object>
     <object>objects\o_restart</object>
     <object>objects\o_smallbulle</object>
+    <object>objects\o_timer_end</object>
+    <object>objects\o_timer</object>
     <object>objects\o_smallfish</object>
     <object>objects\o_splashrod</object>
     <object>objects\o_water_back</object>
     <object>objects\o_X</object>
     <object>objects\o_youScored</object>
+    <object>objects\o_facebook</object>
+    <object>objects\o_twitter</object>
     <object>objects\obj_SharedTweener</object>
     <object>objects\o_shine</object>
   </objects>

@@ -60,7 +60,7 @@
     <instance objName="o_inuit" x="161" y="33" name="inst_598BC6C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_mountain" x="160" y="90" name="inst_D18E6FB9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_ice" x="160" y="51" name="inst_908447A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_nightsky" x="410" y="20" name="inst_B7B3E375" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_nightsky" x="160" y="90" name="inst_B7B3E375" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_water_back" x="160" y="90" name="inst_E5977D63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_backbulles" x="170" y="580" name="inst_1771BDDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
